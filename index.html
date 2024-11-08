@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+
+    <title>Dynamic Interactive Resume Builder</title>
+</head>
+<body>
+
+    <h1 class="heading"> Dynamic Interactive Resume Builder by Sumra Jabeen</h1>
+
+    <form id="resume-form">
+        <fieldset>
+            <legend>Personal Information</legend> <br>
+
+            <!-- Removed profile photo section -->
+            <label for="Name">Your Name</label>
+            <input type="text" id="Name" required> <br><br>
+
+            <label for="Contact">Contact No</label>
+            <input type="number" id="Contact" required> <br><br>
+
+            <label for="Emails">Your Email</label>
+            <input type="email" id="Emails" required> 
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend> <br>
+            <div class="education-form">
+                <label for="institution">Institution</label>
+                <input type="text" id="institution" name="institution" required><br><br>
+
+                <label for="Qualification">Qualification</label>
+                <input type="text" id="Qualification" name="degree" required> <br><br>
+
+                <label for="field-of-study">Field of Study</label>
+                <input type="text" id="field-of-study" name="field-of-study" required><br><br>
+
+                <label for="start-date">Start Date</label> 
+                <input type="date" id="start-date" name="start-date" required> <br><br>
+
+                <label for="end-date">End Date</label>
+                <input type="date" id="end-date" name="end-date" required><br><br>
+
+                <label for="description">Description</label>
+                <textarea id="text" name="Description" placeholder="Additional Information" rows="4" required></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Add a Skill:</label>
+            <input type="text" id="skills" name="skills" placeholder="Enter your skill" >
+            <button type="button" onclick="addSkill()">Add Skill</button>
+            
+            <ul id="skillsList"></ul> <!-- List to display added skills -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Work Experience</legend><br>
+            <label for="experience">Experience</label>
+            <textarea id="experience-text" name="experience" placeholder="Your Experience" rows="4" required></textarea>
+        </fieldset> 
+
+        <button class="button-Resume" type="submit">Generate Your Resume</button>
+    </form> 
+    <div>
+    <div id="resume-output">
+        <div>
+                     <hr>
+                    <h1 style="color:#FFFFFF" data-name></h1>
+                    <hr>
+                    <legend style=" color: #393939; background-color: #cecbcb; padding: 10px; font-size: 1.5em;">Personal Information</legend>
+                    <hr>
+                    <p><strong>Contact <br> </strong> <span data-contact></span></p>
+                    <p><strong>Email <br> </strong> <span dat-email></span></p>
+
+                    <hr>
+            
+                    <legend style="color:#393939; background-color: #cecbcb; padding: 10px; font-size: 1.5em;">Education</legend>
+                    <hr>
+
+                    <p><strong>Institution<br></strong> <span data-institution></span></p>
+                    <p><strong>Qualification <br> </strong> <span data-qualification></span></p>
+                    <p><strong>Field of Study <br> </strong> <span data-field-of-study></span></p>
+                    <p><strong>Start Date <br> </strong> <span data-start-date></span></p>
+                    <p><strong>End Date <br> </strong> <span data-end-date></span></p>
+                    <p><strong>Description <br> </strong> <span data-description></span></p>
+                    <hr>
+            
+                    <legend style="color:#393939; background-color: #cecbcb; padding: 10px; font-size: 1.5em;">Skills</legend>
+                    <ul data-skills-list></ul>
+                    <hr>
+            
+                    <legend style="color:#393939; background-color: #cecbcb; padding: 10px; font-size: 1.5em;">Work Experience</legend>
+                    <hr>
+                    <p><strong>Experience <br> </strong> <span data-experience></span></p>
+            
+       
+            
+                </div>
+
+                </div>
+        <div id="btn" style="display: flex; align-items: center; justify-content: center; margin: 0;">     
+    <button id="download-btn">Download PDF</button>
+    <button id="share-btn">Share via link </button>
+    
+<div id="shareable-link" style="display: none;"></div>
+
+   </div>
+    <script src="script.js"></script>
+</body>
+</html>

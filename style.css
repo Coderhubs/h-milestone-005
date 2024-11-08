@@ -1,0 +1,243 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0; 
+    color: #333; 
+}
+
+.heading h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #000000;
+    padding: 20px;
+}
+ h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    color: #0a0a0a;
+    font-weight: bold;
+       
+}
+form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 5PX 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffffff; /* Added a unique border */
+}
+
+fieldset {
+    border: 2px solid #FFA200 ; /* Border for each fieldset */
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333132;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 600;
+    margin: 8px 0 5px;
+    font-size: 16px;
+    color: #333;
+    
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #333132;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    transition: border 0.3s ease;
+    box-shadow: 10px 5px 10px #b0b0b0 ;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: #393939;
+    color: #ffffff;
+    font-size: 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "poppins";
+    border: 2px solid #FFA200;
+}
+
+button:hover {
+    background-color: #ffffff;
+    border: 2px solid #393939;
+    color: #000000;
+}
+
+.button-Resume:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+}
+
+#resume-output {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 5PX 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffffff; 
+    text-align: justify;
+    align-items: center;
+    padding: 20px;
+}
+
+#resume-output h2 {
+    text-align: justify;
+    color: #0056b3;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+   
+}
+#resume-output p {
+    text-align: justify;
+    color: #333132;
+    font-size: 20px;
+    font-family: "Poppins";
+
+
+   
+}
+
+
+
+.custom-file-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.custom-file-label:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+        margin: 20px;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    #resume-output h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    #resume-output {
+        padding: 20px;
+        margin: 20px;
+        overflow: hidden;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+
+}
+
+#share-btn{
+    background-color: #322e2e;
+    width: 200px;
+    height:40px;
+    padding: 5px;
+    border: 2px solid #f99e00;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #9c9393;
+    margin: 20px;
+    font-size: 14px;
+    color: #FFFFFF;
+  
+
+
+}
+
+#download-btn:hover{
+    cursor: pointer;
+    animation-duration: 5ms;
+    color: #000000;
+    background-color:#FFA200;
+}
+
+
+#download-btn{
+    background-color: #322e2e;
+    width: 200px;
+    height:40px;
+    padding: 5px;
+    border: 2px solid #f99e00;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #9c9393;
+    margin: 20px;
+    font-size: 14px;
+    color: #FFFFFF;
+  
+
+
+}
+
+#share-btn:hover{
+    cursor: pointer;
+    animation-duration: 5ms;
+    color: #000000;
+    background-color:#FFA200;
+}
